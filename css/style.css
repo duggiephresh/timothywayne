@@ -226,7 +226,7 @@ img {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 30%;
 }
 
 .hero-overlay {
@@ -235,7 +235,7 @@ img {
   left: 0;
   right: 0;
   padding: 80px 24px 40px;
-  background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.5) 40%, transparent 100%);
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.85) 0%, rgba(10, 10, 10, 0.4) 40%, transparent 100%);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -653,4 +653,11 @@ img {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ===== Bandsintown Widget ===== */
+/* Hide "Request a Show" fallback when no events */
+.bit-no-dates-container,
+.bit-request-a-show {
+  display: none !important;
 }
