@@ -656,8 +656,11 @@ img {
 }
 
 /* ===== Bandsintown Widget ===== */
-/* Hide "Request a Show" fallback when no events */
+/* Hide empty-state fallbacks and Play My City */
 .bit-no-dates-container,
-.bit-request-a-show {
+.bit-request-a-show,
+.bit-play-my-city,
+[class*="play-my-city"],
+[class*="PlayMyCity"] {
   display: none !important;
 }
