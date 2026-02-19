@@ -35,4 +35,47 @@
       }
     });
   });
+
+  // Header scroll state
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var scrollThreshold = 100;
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          if (window.scrollY > scrollThreshold) {
+            header.classList.add('is-scrolled');
+          } else {
+            header.classList.remove('is-scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+
+  // Scroll-reveal with IntersectionObserver
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    var revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    // If reduced motion or no IntersectionObserver, show everything immediately
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  }
 })();
