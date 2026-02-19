@@ -5,23 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timothy Wayne Music — Rising Country Artist</title>
   <meta name="description" content="Official website of Timothy Wayne, rising country artist and LSU Tiger. Listen to Sounds Of A Small Town now.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://timothywaynemusic.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="music.musician">
+  <meta property="og:title" content="Timothy Wayne — Country Music Artist">
+  <meta property="og:description" content="Official website of Timothy Wayne. Rising country artist and LSU Tiger. Listen to Sounds Of A Small Town.">
+  <meta property="og:image" content="https://timothywaynemusic.com/images/artist-photo.jpg">
+  <meta property="og:url" content="https://timothywaynemusic.com/">
+  <meta property="og:site_name" content="Timothy Wayne Music">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thetimothywayne">
+  <meta name="twitter:title" content="Timothy Wayne — Country Music Artist">
+  <meta name="twitter:description" content="Rising country artist and LSU Tiger. Listen to Sounds Of A Small Town.">
+  <meta name="twitter:image" content="https://timothywaynemusic.com/images/artist-photo.jpg">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Favicon & Manifest -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="images/artist-photo.webp" type="image/webp">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: MusicGroup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Timothy Wayne",
+    "url": "https://timothywaynemusic.com",
+    "image": "https://timothywaynemusic.com/images/artist-photo.jpg",
+    "genre": "Country",
+    "sameAs": [
+      "https://www.facebook.com/TimothyWayne/",
+      "https://www.instagram.com/timothywayne/",
+      "https://www.tiktok.com/@timothywaynemusic",
+      "https://x.com/thetimothywayne",
+      "https://www.youtube.com/@thetimothywaynemusic",
+      "https://www.snapchat.com/add/thetimothywayne"
+    ],
+    "album": {
+      "@type": "MusicAlbum",
+      "name": "Sounds Of A Small Town",
+      "image": "https://timothywaynemusic.com/images/album-cover.jpg",
+      "url": "https://lnk.to/sossttw",
+      "byArtist": { "@type": "MusicGroup", "name": "Timothy Wayne" }
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "management",
+      "email": "info@timothywaynemusic.com"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Timothy Wayne Music",
+    "url": "https://timothywaynemusic.com"
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo-link">
-        <img src="images/logo.png" alt="Timothy Wayne" class="logo">
+        <img src="images/logo.png" alt="Timothy Wayne" class="logo" width="112" height="28">
       </a>
       <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
       <nav class="main-nav" id="main-nav">
+        <a href="#shows" class="nav-link">SHOWS</a>
+        <a href="#music" class="nav-link">MUSIC</a>
         <a href="https://shop.timothywaynemusic.com" class="nav-link shop-link" target="_blank" rel="noopener">SHOP</a>
         <div class="social-links">
           <a href="https://www.facebook.com/TimothyWayne/" target="_blank" rel="noopener" aria-label="Facebook">
@@ -47,35 +126,104 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-image">
-      <img src="images/artist-photo.jpg" alt="Timothy Wayne">
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- Music Section -->
-  <section class="music" id="music">
-    <div class="container">
-      <h2 class="section-title">MUSIC</h2>
-      <div class="album">
-        <div class="album-cover">
-          <img src="images/album-cover.jpg" alt="Sounds Of A Small Town - Timothy Wayne">
-        </div>
-        <h3 class="album-title">Sounds Of A Small Town</h3>
-        <a href="https://lnk.to/sossttw" class="btn listen-btn" target="_blank" rel="noopener">LISTEN</a>
+    <!-- Visually hidden h1 for SEO/screen readers -->
+    <h1 class="sr-only">Timothy Wayne — Country Music Artist</h1>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Artist Photo">
+      <div class="hero-image">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/artist-photo-800w.webp 800w, images/artist-photo-1200w.webp 1200w, images/artist-photo.webp 2400w"
+            sizes="100vw">
+          <img
+            src="images/artist-photo.jpg"
+            alt="Timothy Wayne"
+            width="2400"
+            height="1601"
+            fetchpriority="high">
+        </picture>
       </div>
-    </div>
-  </section>
+      <div class="container hero-bio">
+        <p>Rising country artist out of Baton Rouge, Louisiana. LSU Tiger. Listen to <em>Sounds Of A Small Town</em> everywhere now.</p>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2 class="section-title">CONTACT</h2>
-      <p class="contact-label">Management</p>
-      <a href="mailto:info@timothywaynemusic.com" class="contact-email">info@timothywaynemusic.com</a>
-    </div>
-  </section>
+    <!-- Shows Section -->
+    <section class="shows" id="shows" aria-label="Upcoming Shows">
+      <div class="container">
+        <h2 class="section-title">SHOWS</h2>
+        <a class="bit-widget-initializer"
+          data-artist-name="Timothy Wayne"
+          data-display-local-dates="false"
+          data-display-past-dates="false"
+          data-auto-style="false"
+          data-text-color="rgba(240,240,240,1)"
+          data-link-color="rgba(200,168,100,1)"
+          data-background-color="rgba(10,10,10,0)"
+          data-display-limit="15"
+          data-display-start-time="false"
+          data-link-text-color="rgba(240,240,240,1)"
+          data-display-lineup="false"
+          data-display-play-my-city="true"
+          data-separator-color="rgba(255,255,255,0.06)"
+          data-play-my-city-text-color="rgba(240,240,240,1)"
+          data-font="DM Sans"
+          data-popup-background-color="rgba(10,10,10,0.95)"
+          data-bit-logo-color="rgba(240,240,240,0.3)"
+          data-bit-logo-position="bottomRight"
+          data-event-ticket-cta-size="medium"
+          data-event-ticket-cta-text-color="rgba(10,10,10,1)"
+          data-event-ticket-cta-bg-color="rgba(240,240,240,1)"
+          data-event-ticket-cta-border-color="rgba(240,240,240,1)"
+          data-event-ticket-cta-border-width="1px"
+          data-event-ticket-cta-border-radius="2px"
+          data-date-border-color="rgba(255,255,255,0.2)"
+          data-date-border-width="1px"
+          data-date-border-radius="4px"
+          data-event-ticket-cta-text="TICKETS"
+          data-language="en"
+          data-layout-type="list"
+          data-bit-css-file=""
+        ></a>
+      </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music" id="music" aria-label="Music">
+      <div class="container">
+        <h2 class="section-title">MUSIC</h2>
+        <div class="album">
+          <div class="album-cover">
+            <picture>
+              <source type="image/webp" srcset="images/album-cover.webp">
+              <img
+                src="images/album-cover.jpg"
+                alt="Sounds Of A Small Town — Timothy Wayne album cover"
+                width="1080"
+                height="1080"
+                loading="lazy">
+            </picture>
+          </div>
+          <h3 class="album-title">Sounds Of A Small Town</h3>
+          <a href="https://lnk.to/sossttw" class="btn listen-btn" target="_blank" rel="noopener">LISTEN</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" aria-label="Contact">
+      <div class="container">
+        <h2 class="section-title">CONTACT</h2>
+        <p class="contact-label">Management</p>
+        <a href="mailto:info@timothywaynemusic.com" class="contact-email">info@timothywaynemusic.com</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -104,10 +252,11 @@
         <a href="terms.html">Terms of Service</a>
         <a href="privacy.html">Privacy Policy</a>
       </div>
-      <p class="footer-copyright">&copy; 2025 Timothy Wayne</p>
+      <p class="footer-copyright">&copy; 2026 Timothy Wayne</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="https://widget.bandsintown.com/main.min.js" defer></script>
 </body>
 </html>

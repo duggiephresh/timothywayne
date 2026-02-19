@@ -21,21 +21,18 @@
     });
   }
 
-  // ---------------------------------------------------
-  // Future: Bandsintown / Songkick integration
-  // ---------------------------------------------------
-  // To add upcoming shows, create a "shows" section in
-  // index.html and fetch data here. Example:
-  //
-  // async function loadShows() {
-  //   const res = await fetch(
-  //     'https://rest.bandsintown.com/artists/Timothy%20Wayne/events?app_id=YOUR_APP_ID'
-  //   );
-  //   const events = await res.json();
-  //   const container = document.getElementById('shows-list');
-  //   events.forEach(event => { /* render event */ });
-  // }
-  //
-  // loadShows();
-  // ---------------------------------------------------
+  // Smooth scroll for anchor links (offset for fixed header)
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      var target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        var headerHeight = document.querySelector('.site-header').offsetHeight;
+        var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
+  });
 })();
