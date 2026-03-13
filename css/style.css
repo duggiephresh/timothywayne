@@ -341,6 +341,10 @@ img {
   gap: 24px;
 }
 
+.album + .album {
+  margin-top: 64px;
+}
+
 .album-cover {
   position: relative;
   max-width: 420px;
