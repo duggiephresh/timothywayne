@@ -668,3 +668,13 @@ img {
 [class*="PlayMyCity"] {
   display: none !important;
 }
+
+/* ===== Release Tag (new-single eyebrow) ===== */
+.release-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: -14px;
+}

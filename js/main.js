@@ -79,3 +79,12 @@
     });
   }
 })();
+
+// Release-day flip: on/after Aug 28, 2026 (local time), pre-save copy becomes listen copy
+(function () {
+  if (new Date() >= new Date(2026, 7, 28)) {
+    document.querySelectorAll('[data-post]').forEach(function (el) {
+      el.textContent = el.getAttribute('data-post');
+    });
+  }
+})();
